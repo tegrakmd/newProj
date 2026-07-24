@@ -9,7 +9,7 @@
 html,
 body {
   width: 100%;
-  height: 100dvh;
+  height: 100%;
   overflow: hidden;
   background: #0f0f0f;
   color: #fff;
@@ -168,7 +168,7 @@ img {
   .overlay {
     width: 100%;
     height: 100dvh;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 1rem;
   }
   .item-detail {
