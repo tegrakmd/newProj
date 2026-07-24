@@ -9,7 +9,7 @@ const tl = gsap.timeline({
 });
 
 tl.to(overlay, {
-  duration: 0.5,
+  duration: 0.9,
   bottom: "0px",
   rotation: 0,
   transformOrigin: "bottom center",
@@ -34,12 +34,14 @@ function updateOverlay(dataItem) {
   const itemLink = document.querySelector("#item-link");
   const itemCopy = document.querySelector("#item-copy");
   const itemImg = document.querySelector("#item-img");
+  const itemImg2 = document.querySelector("#item-img2");
 
   itemName.textContent = dataItem.itemName;
   itemCategory.textContent = dataItem.itemCategory;
   itemCopy.textContent = dataItem.itemCopy;
   itemLink.href = dataItem.itemLink;
   itemImg.src = dataItem.itemImg;
+  itemImg2.src = dataItem.itemImg2;
 }
 
 document.addEventListener("click", (e) => {

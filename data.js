@@ -6,6 +6,17 @@ export const data = [
     itemCopy:
       "Plateforme e-commerce innovante spécialisée dans la vente de produits artisanaux africains avec livraison internationale.",
     itemImg: "/images/1.png",
+    itemImg2: "/images/2.png",
+  },
+
+  {
+    itemName: "Carousel",
+    itemCategory: "Switch",
+    itemCopy:
+      "Agence de design graphique créant des identités visuelles uniques pour les marques modernes et engagées.",
+    itemLink: "https://www.tegrakmd.me",
+    itemImg: "/images/carousels/1.png",
+    itemImg2: "/images/carousels/2.png",
   },
   {
     itemName: "Sophie Laurent",

@@ -63,6 +63,11 @@ img {
   width: 50%;
   display: flex;
   flex-direction: column;
+  mix-blend-mode: difference;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2);
 }
 .item {
   display: flex;
@@ -85,7 +90,7 @@ img {
   bottom: -1200px;
   right: 0;
   width: 70%;
-  height: 700px;
+  height: 950px;
   padding: 2rem;
   background: #fff;
   color: #000;
@@ -101,7 +106,7 @@ img {
 }
 .img-container {
   width: 100%;
-  padding-bottom: 2rem;
+  padding-bottom: 1em;
 }
 .overlay-header {
   width: 100%;
@@ -119,6 +124,7 @@ img {
 #close-btn {
   cursor: pointer;
   opacity: 0.4;
+  text-transform: uppercase;
 }
 .item-detail {
   width: 100%;
@@ -132,7 +138,16 @@ img {
 .item-detail p:nth-child(2) {
   flex: 2;
 }
-
+.img-cover {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+}
+.image-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 @media (max-width: 900px) {
   .items {
     width: 100%;
