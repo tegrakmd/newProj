@@ -17,6 +17,7 @@ export const data = [
     itemLink: "https://www.tegrakmd.me",
     itemImg: "/images/carousels/1.png",
     itemImg2: "/images/carousels/2.png",
+    itemImg3: "/images/carousels/3.png",
   },
   {
     itemName: "Sophie Laurent",

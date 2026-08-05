@@ -28,20 +28,32 @@ closeBtn.addEventListener("click", () => {
   tl.reverse();
 });
 
+function getItemImages(dataItem) {
+  return [dataItem.itemImg, dataItem.itemImg2, dataItem.itemImg3].filter(
+    Boolean,
+  );
+}
+
 function updateOverlay(dataItem) {
   const itemName = document.querySelector("#item-name");
   const itemCategory = document.querySelector("#item-category");
   const itemLink = document.querySelector("#item-link");
   const itemCopy = document.querySelector("#item-copy");
-  const itemImg = document.querySelector("#item-img");
-  const itemImg2 = document.querySelector("#item-img2");
+  const galleryGrid = document.querySelector(".gallery-grid");
+  const images = getItemImages(dataItem);
 
   itemName.textContent = dataItem.itemName;
   itemCategory.textContent = dataItem.itemCategory;
   itemCopy.textContent = dataItem.itemCopy;
   itemLink.href = dataItem.itemLink;
-  itemImg.src = dataItem.itemImg;
-  itemImg2.src = dataItem.itemImg2;
+
+  galleryGrid.classList.toggle("has-multiple", images.length > 1);
+  galleryGrid.innerHTML = images
+    .map(
+      (src) =>
+        `<div class="img-container"><img src="${src}" alt="${dataItem.itemName}" /></div>`,
+    )
+    .join("");
 }
 
 document.addEventListener("click", (e) => {
